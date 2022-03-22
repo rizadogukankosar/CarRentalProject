@@ -1,0 +1,23 @@
+<div id="<%= dom_id car %>" style="display: inline-block; margin-right: 60px;margin-left: 60px;margin-top: 20px">
+
+
+  <div class="card" style="width: 18rem;">
+    <%= image_tag ("#{car.picture}"), class: "img-responsive", height: "180px"%>
+
+    <div class="card-body">
+      <h5 class="card-title"><%= car.make %> <%= car.model %></h5>
+      <p class="card-text"></p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Year: <%= car.year %></li>
+      <li class="list-group-item">Engine: <%= car.engineCapacity%> lt</li>
+      <li class="list-group-item">Power: <%= car.horsePower %>hp</li>
+    </ul>
+    <div class="card-body">
+      <a> Daily Price: <%= car.dailyPrice %>$  </a>
+      <%= link_to "Show this car", car ,class: "btn btn-outline-dark"%>
+    </div>
+  </div>
+
+
+</div>

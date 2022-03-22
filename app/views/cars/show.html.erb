@@ -1,0 +1,31 @@
+<p style="color: green"><%= notice %></p>
+
+
+<%= link_to "Back to cars", cars_path ,class: "btn btn-outline-dark", style: "margin-left: 30px"%>
+
+
+<%= image_tag ("#{@car.picture}"), class: "img-responsive", style: "display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;"%>
+
+<div style="display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  width: 50%;">
+  <h1><%= @car.make %> <%= @car.model %></h1>
+
+  <div style="float: left">
+    <h5>Year: <%= @car.year %></h5>
+    <h5>Engine: <%= @car.engineCapacity %> lt</h5>
+  </div>
+
+  <div style="float: right">
+    <h5>Power: <%= @car.horsePower %> hp</h5>
+    <h5>Daily Price: <%= @car.dailyPrice %>$</h5>
+  </div>
+
+
+
+</div>

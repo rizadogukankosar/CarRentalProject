@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<h1 style="margin-left: 60px">Cars</h1>
+
+<div id="cars">
+  <% @cars.each do |car| %>
+    <%= render car %>
+  <% end %>
+</div>
+

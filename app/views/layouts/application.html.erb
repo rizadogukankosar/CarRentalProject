@@ -21,8 +21,12 @@
         <%= image_tag ("logo.png"), class: "img-responsive", size: "90x50" , style: "margin-right: 20px"%>
         RDK CarRental
       </a>
+      <%= link_to "New car", new_car_path ,class: "btn btn-outline-dark", style: "margin-right: 30px" %>
     </div>
   </nav>
+
+
+
   <%= yield %>
 
     <!-- Optional JavaScript; choose one of the two! -->

@@ -1,0 +1,23 @@
+<div id="<%= dom_id reservation %>">
+
+  <div class="card" style="width: 18rem;margin-bottom: 30px">
+
+    <div class="card-body">
+      <h5 class="card-title"><%= reservation.name %>     <%= reservation.surname %></h5>
+      <p class="card-text"></p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Start Date:  <%= reservation.firstDay %></li>
+      <li class="list-group-item">Count of day:     <%= reservation.countOfDay %></li>
+      <li class="list-group-item" >Price:   <%= @car.dailyPrice.to_i * reservation.countOfDay.to_i %> $</li>
+    </ul>
+    <div class="card-body">
+      <%= link_to "Delete", [reservation.car, reservation], data: {
+        turbo_method: :delete,
+      } , class: "btn btn-outline-dark"%>
+
+    </div>
+  </div>
+
+
+</div>

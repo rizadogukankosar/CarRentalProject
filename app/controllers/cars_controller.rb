@@ -49,12 +49,9 @@ class CarsController < ApplicationController
 
   # DELETE /cars/1 or /cars/1.json
   def destroy
+    @car = Car.find(params[:id])
     @car.destroy
-
-    respond_to do |format|
-      format.html { redirect_to cars_url, notice: "Car was successfully destroyed." }
-      format.json { head :no_content }
-    end
+    redirect_to root_path, status: :see_other
   end
 
   private

@@ -1,0 +1,26 @@
+<%= form_with model: [ @car, @car.reservations.build ] do |form| %>
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :surname, style: "display: block" %>
+    <%= form.text_field :surname %>
+  </div>
+
+  <div>
+    <%= form.label :firstDay, style: "display: block" %>
+    <%= form.date_field :firstDay%>
+  </div>
+
+  <div>
+    <%= form.label :countOfDay, style: "display: block" %>
+    <%= form.number_field :countOfDay%>
+  </div>
+
+  <br>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
